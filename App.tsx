@@ -342,7 +342,7 @@ const App: React.FC = () => {
         {/* Top: Base Amount (Salary) */}
         <section className="bg-indigo-600 rounded-xl shadow-md p-3 text-white relative group">
           <div className="flex justify-between items-center mb-1">
-            <label className="block text-indigo-100 text-[10px] font-medium uppercase">기준 금액 (Salary)</label>
+            <label className="block text-indigo-100 text-[10px] font-medium uppercase">기준 금액 (BASE AMOUNT)</label>
             <div className="text-[9px] font-medium flex items-center gap-1 opacity-80">
               {saveStatus === 'saving' && <><i className="fa-solid fa-circle-notch animate-spin text-white"></i> Saving</>}
               {saveStatus === 'saved' && <><i className="fa-solid fa-circle-check text-emerald-300"></i> Saved</>}
@@ -369,7 +369,7 @@ const App: React.FC = () => {
 
         {/* Middle: Items */}
         <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className="px-4 py-3 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+          <div className="px-4 py-1 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
             <h2 className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Expenses & Income</h2>
             <div className="flex items-center gap-10">
               <button 
@@ -387,7 +387,7 @@ const App: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="p-3 space-y-2">
+          <div className="p-3 space-y-1.5">
             {items.map((item) => (
               <div key={item.id} className="flex items-center gap-3 animate-fade-in">
                 <div className="w-28 shrink-0 font-medium text-slate-600 text-[11px] truncate">{item.label}</div>
@@ -421,7 +421,7 @@ const App: React.FC = () => {
         <section className="bg-slate-900 rounded-xl shadow-lg overflow-hidden border border-slate-800">
            <div 
              onClick={() => setIsResultExpanded(!isResultExpanded)}
-             className="p-5 cursor-pointer hover:bg-slate-800/40 transition-colors flex flex-col gap-1.5 relative"
+             className="p-5 cursor-pointer hover:bg-slate-800/40 transition-colors flex flex-col gap-1 relative"
            >
              <div className="font-mono text-[10px] flex justify-between items-center text-slate-500">
                 <span className="uppercase tracking-widest text-[8px]">Base Amount</span>
@@ -567,7 +567,7 @@ const App: React.FC = () => {
       )}
 
       <footer className="w-full max-w-lg text-center mt-4 text-slate-400 text-[8px] uppercase tracking-widest">
-        <p>© {new Date().getFullYear()} Monthly Budget. Built for Efficiency</p>
+        <p>© {new Date().getFullYear()} Monthly Budget. made by EWSIT.</p>
       </footer>
     </div>
   );
